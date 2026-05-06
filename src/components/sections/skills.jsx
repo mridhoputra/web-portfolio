@@ -10,15 +10,20 @@ const SkillsSection = () => {
     <Container>
       <div className="flex flex-col items-center gap-4">
         <div className="self-center">
-          <Tag label="Skills" />
+          <Tag label="Keahlian" />
         </div>
 
-        <Typography variant="subtitle" className="max-w-xl text-center">
-          The skills, tools and technologies I am really good at:
+        <Typography
+          variant="subtitle"
+          className="max-w-2xl text-center leading-relaxed"
+        >
+          Teknologi, tools, dan framework yang biasa saya gunakan
+          dalam pengembangan aplikasi mobile, website, serta workflow
+          pengembangan modern.
         </Typography>
       </div>
 
-      <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
+      <div className="mt-14 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {TECHNOLOGIES.map((technology, index) => (
           <TechDetails
             {...technology}
