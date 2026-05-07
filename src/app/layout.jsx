@@ -13,12 +13,12 @@ const inter = Inter({
 });
 
 const title =
-  'Sagar Shah | Full Stack Developer From Ahmedabad, India.';
+  'M. Ridho Putra Sufa | Flutter Mobile Developer';
 
 const description =
-  'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
+  'Portfolio M. Ridho Putra Sufa, mobile developer yang berfokus pada pengembangan aplikasi Android dan iOS menggunakan Flutter dengan pengalaman lebih dari 5 tahun dalam mobile development.';
 
-const url = 'https://sagarshah.dev';
+const url = 'https://your-domain.com';
 
 export const metadata = {
   metadataBase: new URL(url),
@@ -28,13 +28,17 @@ export const metadata = {
   description,
 
   keywords: [
-    'Frontend Developer',
-    'Full Stack Developer',
-    'React Developer',
-    'Next.js Developer',
+    'Flutter Developer',
+    'Mobile Developer Indonesia',
+    'Flutter Indonesia',
+    'Android Developer',
+    'iOS Developer',
+    'Flutter Freelance',
+    'Next.js',
+    'Strapi CMS',
   ],
 
-  creator: 'Sagar Shah',
+  creator: 'M. Ridho Putra Sufa',
 
   openGraph: {
     type: 'website',
@@ -45,25 +49,7 @@ export const metadata = {
 
     description,
 
-    siteName: title,
-
-    images: [
-      {
-        url: '/images/open-graph-sagar.png',
-      },
-    ],
-  },
-
-  twitter: {
-    card: 'summary_large_image',
-
-    title,
-
-    description,
-
-    creator: '@shahsagarm',
-
-    images: '/images/open-graph-sagar.png',
+    siteName: 'Portfolio Ridho',
   },
 
   icons: {
@@ -83,7 +69,7 @@ export const viewport = {
     },
     {
       media: '(prefers-color-scheme: dark)',
-      color: 'black',
+      color: '#030712',
     },
   ],
 };
@@ -94,7 +80,7 @@ const googleAnalyticsId =
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="id"
       className="!scroll-smooth"
       suppressHydrationWarning
     >
