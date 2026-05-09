@@ -1,6 +1,7 @@
+// experience-details.jsx
+
 import Typography from '@/components/general/typography';
 import ImageWrapper from '@/components/data-display/image-wrapper';
-import Card from '@/components/layout/card';
 
 const dateFormatOptions = {
   year: 'numeric',
@@ -11,6 +12,7 @@ const ExperienceDetails = ({
   logo,
   darkModeLogo,
   logoAlt,
+  company,
   position,
   currentlyWorkHere,
   startDate,
@@ -18,46 +20,123 @@ const ExperienceDetails = ({
   summary,
 }) => {
   return (
-    <Card className="mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8">
-      <div className="max-md:order-1 md:w-1/4">
-        <ImageWrapper
-          src={logo}
-          srcForDarkMode={darkModeLogo}
-          alt={logoAlt}
-          className="max-w-[120px]"
-        />
-      </div>
+    <div
+      className="
+        group
+        rounded-3xl
+        border
+        border-gray-200
+        bg-white
+        p-6
+        shadow-sm
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-xl
+        md:p-8
+      "
+    >
+      <div className="flex flex-col gap-8 md:flex-row md:items-start">
+        {/* Logo */}
+        <div className="flex shrink-0 items-start justify-start">
+          <div
+            className="
+              flex
+              h-20
+              w-20
+              items-center
+              justify-center
+              rounded-2xl
+              border
+              border-gray-100
+              bg-gray-50
+              p-3
+              transition-transform
+              duration-300
+              group-hover:scale-105
+              md:h-24
+              md:w-24
+            "
+          >
+            <ImageWrapper
+              src={logo}
+              srcForDarkMode={darkModeLogo}
+              alt={logoAlt}
+              width={80}
+              height={80}
+              className="h-auto w-full object-contain"
+            />
+          </div>
+        </div>
 
-      <div className="flex flex-col gap-4 max-md:order-3 md:w-2/4">
-        <Typography variant="subtitle" className="font-semibold text-gray-900">
-          {position}
-        </Typography>
+        {/* Content */}
+        <div className="flex flex-1 flex-col gap-5">
+          {/* Header */}
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div className="flex flex-col gap-1">
+              <Typography
+                variant="subtitle"
+                className="font-semibold text-gray-900"
+              >
+                {position}
+              </Typography>
 
-        <ul className="flex list-disc flex-col gap-2 md:gap-1">
-          {summary?.map((sentence, index) => (
-            <Typography component="li" key={index}>
-              {sentence}
-            </Typography>
-          ))}
-        </ul>
-      </div>
+              {company && (
+                <Typography className="font-medium text-gray-500">
+                  {company}
+                </Typography>
+              )}
+            </div>
 
-      <div className="max-md:order-2 md:w-1/4">
-        <Typography className="text-gray-700 md:text-right">
-          {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
-            startDate
-          )}{' '}
-          -{' '}
-          {currentlyWorkHere
-            ? 'Present'
-            : endDate
-              ? new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
-                endDate
-              )
-              : 'NA'}
-        </Typography>
+            <div
+              className="
+                inline-flex
+                w-fit
+                rounded-full
+                bg-gray-100
+                px-4
+                py-1.5
+              "
+            >
+              <Typography
+                variant="body3"
+                className="font-medium text-gray-700"
+              >
+                {new Intl.DateTimeFormat(
+                  'id-ID',
+                  dateFormatOptions
+                ).format(startDate)}{' '}
+                -{' '}
+                {currentlyWorkHere
+                  ? 'Sekarang'
+                  : endDate
+                    ? new Intl.DateTimeFormat(
+                      'id-ID',
+                      dateFormatOptions
+                    ).format(endDate)
+                    : '-'}
+              </Typography>
+            </div>
+          </div>
+
+          {/* Summary */}
+          <ul className="flex flex-col gap-3">
+            {summary?.map((sentence, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-3"
+              >
+                <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-gray-400" />
+
+                <Typography className="leading-relaxed">
+                  {sentence}
+                </Typography>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 };
 
