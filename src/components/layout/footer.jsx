@@ -3,37 +3,37 @@ import { Copyright } from 'lucide-react';
 import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
 
-import { EXTERNAL_LINKS } from '@/lib/data';
-
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-50 py-6">
-      <div className="flex items-center justify-center gap-1">
-        <Typography className="flex items-center" variant="body3">
-          <Copyright className="mr-1 inline-block h-4 w-4" />
-          {new Date().getFullYear()} |&nbsp;
+    <footer className="w-full border-t border-gray-200 bg-gray-50 py-8">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 px-4 text-center">
+        <Typography
+          variant="body3"
+          className="flex flex-wrap items-center justify-center text-gray-600"
+        >
+          <Copyright className="mr-1 h-4 w-4" />
 
+          {new Date().getFullYear()} M Ridho Putra Sufa.
+          Built with Flutter mindset, coffee,
+          and lots of problem solving.
+        </Typography>
+
+        <Typography
+          variant="body3"
+          className="text-gray-500"
+        >
+          Portfolio originally inspired by{' '}
           <Link
-            noCustomization
+            href="https://github.com/shahsagarm"
             externalLink
             withUnderline
-            href={EXTERNAL_LINKS.FIGMA_FILE}
-          >
-            Designed
-          </Link>
-
-          &nbsp;and&nbsp;
-
-          <Link
             noCustomization
-            externalLink
-            withUnderline
-            href={EXTERNAL_LINKS.GITHUB_REPO}
           >
-            coded
+            Sagar Shah
           </Link>
-
-          &nbsp;with ❤️️ by Sagar Shah
+          , then heavily redesigned and customized
+          for personal branding and mobile app
+          showcase.
         </Typography>
       </div>
     </footer>

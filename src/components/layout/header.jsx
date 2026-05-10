@@ -10,7 +10,7 @@ import {
   DrawerClose,
 } from '@/components/navigation/drawer';
 
-import { NAV_LINKS } from '@/lib/data';
+import { NAV_LINKS } from '@/data/nav-links';
 import { mergeClasses } from '@/lib/utils';
 
 import useWindowSize from '@/hooks/use-window-size';

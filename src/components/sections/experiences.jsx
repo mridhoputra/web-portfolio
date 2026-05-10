@@ -1,6 +1,6 @@
 // experience-section.jsx
 
-import { EXPERIENCES } from '@/lib/data';
+import { EXPERIENCES } from '@/data/experiences';
 
 import ExperienceDetails from '@/components/data-display/experience-details';
 import Tag from '@/components/data-display/tag';

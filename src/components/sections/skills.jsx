@@ -1,4 +1,4 @@
-import { TECHNOLOGIES } from '@/lib/data';
+import { TECHNOLOGIES } from '@/data/technologies';
 
 import Tag from '@/components/data-display/tag';
 import TechDetails from '@/components/data-display/tech-details';
