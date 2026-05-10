@@ -17,7 +17,6 @@ import useWindowSize from '@/hooks/use-window-size';
 import useScroll from '@/hooks/use-scroll';
 
 import Link from '@/components/navigation/link';
-import ThemeSwitcher from '@/components/general/theme-switcher';
 import IconButton from '@/components/general/icon-button';
 import DownloadCV from '@/components/general/download-cv';
 import Typography from '@/components/general/typography';
@@ -124,14 +123,6 @@ const Header = () => {
             </div>
 
             <div className="flex flex-col gap-4 p-4">
-              <div className="flex items-center justify-between">
-                <Typography className="font-medium">
-                  Switch Theme
-                </Typography>
-
-                <ThemeSwitcher />
-              </div>
-
               <DownloadCV />
             </div>
           </DrawerContent>

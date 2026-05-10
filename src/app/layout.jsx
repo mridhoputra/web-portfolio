@@ -6,8 +6,6 @@ import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
-import { Providers } from '@/lib/providers';
-
 const inter = Inter({
   subsets: ['latin'],
 });
@@ -68,16 +66,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: [
-    {
-      media: '(prefers-color-scheme: light)',
-      color: 'white',
-    },
-    {
-      media: '(prefers-color-scheme: dark)',
-      color: '#030712',
-    },
-  ],
+  themeColor: '#ffffff',
 };
 
 const googleAnalyticsId =
@@ -88,7 +77,6 @@ export default function RootLayout({ children }) {
     <html
       lang="id"
       className="!scroll-smooth"
-      suppressHydrationWarning
     >
       <body
         className={`${inter.className} bg-gray text-gray-600 antialiased`}
@@ -119,15 +107,13 @@ export default function RootLayout({ children }) {
           </>
         )}
 
-        <Providers>
-          <Header />
+        <Header />
 
-          <main className="flex min-h-screen w-full flex-col">
-            {children}
-          </main>
+        <main className="flex min-h-screen w-full flex-col">
+          {children}
+        </main>
 
-          <Footer />
-        </Providers>
+        <Footer />
       </body>
     </html>
   );

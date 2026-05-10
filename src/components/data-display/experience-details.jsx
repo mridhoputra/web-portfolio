@@ -1,7 +1,7 @@
 // experience-details.jsx
 
 import Typography from '@/components/general/typography';
-import ImageWrapper from '@/components/data-display/image-wrapper';
+import Image from 'next/image';
 
 const dateFormatOptions = {
   year: 'numeric',
@@ -10,7 +10,6 @@ const dateFormatOptions = {
 
 const ExperienceDetails = ({
   logo,
-  darkModeLogo,
   logoAlt,
   company,
   position,
@@ -58,9 +57,8 @@ const ExperienceDetails = ({
               md:w-24
             "
           >
-            <ImageWrapper
+            <Image
               src={logo}
-              srcForDarkMode={darkModeLogo}
               alt={logoAlt}
               width={80}
               height={80}
