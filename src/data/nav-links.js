@@ -4,6 +4,14 @@ export const NAV_LINKS = [
         href: '#about',
     },
     {
+        label: 'Keahlian',
+        href: '#skills',
+    },
+    {
+        label: 'Pengalaman',
+        href: '#experience',
+    },
+    {
         label: 'Project',
         href: '#work',
     },

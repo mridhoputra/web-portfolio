@@ -80,8 +80,6 @@ const Header = () => {
           <div className="h-6 w-px bg-gray-200" />
 
           <div className="flex items-center gap-4">
-            <ThemeSwitcher />
-
             <DownloadCV />
           </div>
         </div>
