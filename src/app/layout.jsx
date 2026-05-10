@@ -16,7 +16,7 @@ const title =
   'M. Ridho Putra Sufa | Flutter Mobile Developer';
 
 const description =
-  'Portfolio M. Ridho Putra Sufa, mobile developer yang berfokus pada pengembangan aplikasi Android dan iOS menggunakan Flutter dengan pengalaman lebih dari 5 tahun dalam mobile development.';
+  'Portfolio M. Ridho Putra Sufa, Flutter Mobile Developer dari Palembang yang berpengalaman membangun aplikasi pemerintahan, enterprise system, dan aplikasi edukasi berbasis Android dan iOS.';
 
 const url = 'https://your-domain.com';
 
@@ -28,14 +28,20 @@ export const metadata = {
   description,
 
   keywords: [
-    'Flutter Developer',
-    'Mobile Developer Indonesia',
-    'Flutter Indonesia',
-    'Android Developer',
-    'iOS Developer',
-    'Flutter Freelance',
-    'Next.js',
-    'Strapi CMS',
+    'Ridho Putra',
+    'M Ridho Putra Sufa',
+    'Flutter Developer Indonesia',
+    'Flutter Mobile Developer',
+    'Mobile Developer Palembang',
+    'Flutter Freelancer Indonesia',
+    'Flutter Engineer',
+    'Android Developer Indonesia',
+    'iOS Developer Indonesia',
+    'Sidemang',
+    'Lambidaro',
+    'Halo Palembang',
+    'Flutter Portfolio',
+    'Next.js Portfolio',
   ],
 
   creator: 'M. Ridho Putra Sufa',
