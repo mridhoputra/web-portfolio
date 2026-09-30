@@ -3,6 +3,7 @@ import Image from 'next/image';
 import {
   ArrowRight,
   ExternalLink,
+  Globe,
   Smartphone,
 } from 'lucide-react';
 
@@ -20,6 +21,7 @@ const ProjectDetails = ({
   shortDescription,
   technologies,
   storeLinks,
+  websiteLink,
   screenshots,
   previewImageIndex,
 }) => {
@@ -27,6 +29,8 @@ const ProjectDetails = ({
     screenshots?.[
     previewImageIndex || 0
     ];
+
+  const isWebsite = platform?.includes('Website');
 
   return (
     <Card
@@ -62,11 +66,10 @@ const ProjectDetails = ({
             <Image
               src={previewImage}
               alt={title}
-              width={340}
-              height={720}
-              className="
+              width={isWebsite ? 1470 : 340}
+              height={isWebsite ? 749 : 720}
+              className={`
                 h-auto
-                w-[220px]
                 rounded-[32px]
                 border
                 border-gray-200
@@ -76,8 +79,10 @@ const ProjectDetails = ({
                 transition-transform
                 duration-500
                 hover:scale-[1.02]
-                md:w-[280px]
-              "
+                ${isWebsite
+                  ? 'w-full md:max-w-[620px]'
+                  : 'w-[220px] md:w-[280px]'}
+              `}
             />
           )}
         </div>
@@ -216,6 +221,35 @@ const ProjectDetails = ({
                 <ExternalLink
                   size={16}
                 />
+              </Link>
+            )}
+
+            {websiteLink && (
+              <Link
+                href={websiteLink}
+                externalLink
+                noCustomization
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-2xl
+                  border
+                  border-gray-200
+                  bg-white
+                  px-5
+                  py-3
+                  text-sm
+                  font-medium
+                  text-gray-700
+                  transition-all
+                  hover:-translate-y-0.5
+                  hover:bg-gray-100
+                "
+              >
+                <Globe size={18} />
+                Visit Website
+                <ExternalLink size={16} />
               </Link>
             )}
           </div>

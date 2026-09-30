@@ -92,7 +92,7 @@ export const PROJECT_SECTIONS = [
 
                 slug: 'lambidaro',
 
-                featured: true,
+                featured: false,
 
                 previewImageIndex: 1,
 
@@ -241,7 +241,96 @@ export const PROJECT_SECTIONS = [
                     '/images/projects/halo-map.jpeg',
                     '/images/projects/halo-bed.jpeg',
                 ],
-            }
+            },
+
+            {
+                id: 'website-jdih-kota-palembang',
+
+                slug: 'website-jdih-kota-palembang',
+
+                featured: true,
+
+                previewImageIndex: 0,
+
+                title: 'Website JDIH Kota Palembang',
+
+                category: 'Portal Informasi Hukum Pemerintah',
+
+                platform: ['Website'],
+
+                year: '2026',
+
+                shortDescription:
+                    'Revamp menyeluruh website resmi JDIH Kota Palembang menjadi portal produk hukum yang modern, responsif, mudah diakses, dan didukung arsitektur web terbaru.',
+
+                fullDescription:
+                    'Website JDIH Kota Palembang merupakan website resmi milik Bagian Hukum Sekretariat Daerah Kota Palembang yang menjadi pusat akses produk dan informasi hukum daerah. Dalam periode 24 Juli hingga 24 Agustus 2026, website lama berbasis Next.js 12 dan SCSS direvamp secara menyeluruh menggunakan Next.js 16, React Server Components, dan Tailwind CSS. Pembaruan ini menjadi lompatan besar pada arsitektur, keamanan integrasi data, responsivitas, aksesibilitas, SEO produk hukum, serta pengalaman masyarakat dalam menemukan dokumen hukum. Website resmi versi baru diluncurkan pada Agustus 2026.',
+
+                impact: [
+                    'Menghadirkan portal JDIH Kota Palembang yang lebih modern, profesional, responsif, dan mudah diakses di berbagai perangkat',
+                    'Mempermudah masyarakat menemukan produk hukum melalui pencarian dan filter yang tersedia langsung pada bagian utama website',
+                    'Menyediakan fondasi pengelolaan konten dan produk hukum yang lebih terstruktur melalui integrasi Next.js dan Strapi CMS',
+                ],
+
+                role: [
+                    'Menjadi full-stack web developer tunggal yang menangani seluruh implementasi Next.js, integrasi API, dan pengelolaan Strapi CMS v4',
+                    'Melakukan revamp dan migrasi menyeluruh dari Next.js 12 dan SCSS ke Next.js 16, React Server Components, dan Tailwind CSS',
+                    'Memindahkan proses pengambilan dan transformasi data utama dari client-side rendering ke server melalui React Server Components',
+                    'Mengimplementasikan desain responsif dari Figma hasil kolaborasi dengan UI/UX designer sekaligus team leader',
+                    'Mengembangkan pencarian produk hukum berdasarkan judul, tahun, nomor, kategori, dan subkategori',
+                    'Mengelola content type, endpoint, role, permission, serta membuat custom controller Strapi untuk statistik produk hukum',
+                    'Membangun sistem slug produk hukum dan melakukan backfill data lama melalui PostgreSQL dengan penanganan slug duplikat berdasarkan nomor dan tahun',
+                    'Mengimplementasikan caching dengan revalidation 60 detik agar konten dari CMS tetap efisien dan cepat diperbarui',
+                    'Mengintegrasikan fitur aksesibilitas melalui Cocoon A11y untuk membantu berbagai kebutuhan pengguna',
+                    'Menggunakan Claude AI, ChatGPT, dan Codex sebagai alat bantu pengembangan, validasi arsitektur, serta migrasi data',
+                ],
+
+                features: [
+                    'Pencarian produk hukum berdasarkan judul',
+                    'Filter tahun, nomor, kategori, dan subkategori',
+                    'Statistik produk hukum',
+                    'Produk hukum terbaru',
+                    'URL produk hukum yang unik dan ramah SEO',
+                    'Infografis hukum',
+                    'Berita kegiatan dan galeri foto',
+                    'Profil dan informasi kelembagaan JDIH',
+                    'Pembentukan perundang-undangan',
+                    'Monografi hukum dan dokumen hukum langka',
+                    'Konsultasi dan bantuan hukum',
+                    'Relaas dan panggilan sidang',
+                    'Tautan website terkait',
+                    'Pemutar lagu daerah Palembang',
+                    'Profil aksesibilitas, read aloud, mode visual, dan bantuan navigasi',
+                ],
+
+                technologies: [
+                    'Next.js 16',
+                    'React Server Components',
+                    'Tailwind CSS',
+                    'Strapi CMS v4',
+                    'PostgreSQL',
+                    'REST API',
+                    'Cocoon A11y',
+                    'Figma',
+                ],
+
+                achievements: [
+                    'Menyelesaikan revamp menyeluruh dan peluncuran website resmi dalam periode pengembangan satu bulan',
+                    'Memodernisasi codebase lama menjadi arsitektur web berbasis server yang lebih terstruktur dan sesuai praktik pengembangan terkini',
+                    'Memigrasikan data produk hukum lama ke struktur URL unik tanpa kehilangan konten yang telah tersedia',
+                ],
+
+                websiteLink:
+                    'https://jdih.palembang.go.id',
+
+                screenshots: [
+                    '/images/projects/web-jdih-1.png',
+                    '/images/projects/web-jdih-2.png',
+                    '/images/projects/web-jdih-3.png',
+                    '/images/projects/web-jdih-4.png',
+                    '/images/projects/web-jdih-5.png',
+                ],
+            },
         ],
     },
 

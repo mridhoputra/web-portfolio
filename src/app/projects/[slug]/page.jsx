@@ -11,6 +11,7 @@ import { notFound } from 'next/navigation';
 
 import {
     ExternalLink,
+    Globe,
     Smartphone,
 } from 'lucide-react';
 
@@ -38,6 +39,11 @@ const ProjectDetailPage = ({
     if (!project) {
         notFound();
     }
+
+    const isWebsite =
+        project.platform?.includes(
+            'Website'
+        );
 
     const [
         isGalleryOpen,
@@ -205,6 +211,35 @@ const ProjectDetailPage = ({
                                             </Link>
                                         )}
 
+                                    {project.websiteLink && (
+                                        <Link
+                                            href={project.websiteLink}
+                                            externalLink
+                                            noCustomization
+                                            className="
+                        inline-flex
+                        items-center
+                        gap-2
+                        rounded-2xl
+                        border
+                        border-gray-200
+                        bg-white
+                        px-5
+                        py-3
+                        text-sm
+                        font-medium
+                        text-gray-700
+                        transition-all
+                        hover:-translate-y-0.5
+                        hover:bg-gray-100
+                      "
+                                        >
+                                            <Globe size={18} />
+                                            Visit Website
+                                            <ExternalLink size={16} />
+                                        </Link>
+                                    )}
+
                                     {project
                                         .storeLinks
                                         ?.appStore && (
@@ -278,19 +313,20 @@ const ProjectDetailPage = ({
                                             alt={
                                                 project.title
                                             }
-                                            width={380}
-                                            height={760}
-                                            className="
+                                            width={isWebsite ? 1470 : 380}
+                                            height={isWebsite ? 749 : 760}
+                                            className={`
                       h-auto
-                      w-[240px]
                       rounded-[36px]
                       border
                       border-gray-200
                       bg-white
                       object-cover
                       shadow-2xl
-                      md:w-[320px]
-                    "
+                      ${isWebsite
+                                                    ? 'w-full md:max-w-[680px]'
+                                                    : 'w-[240px] md:w-[320px]'}
+                    `}
                                         />
                                     )}
                             </div>
@@ -344,17 +380,18 @@ const ProjectDetailPage = ({
                                                     src={image}
                                                     alt={`${project.title} screenshot ${index + 1
                                                         }`}
-                                                    width={300}
-                                                    height={640}
-                                                    className="
+                                                    width={isWebsite ? 840 : 300}
+                                                    height={isWebsite ? 500 : 640}
+                                                    className={`
                             h-auto
-                            w-[240px]
                             object-cover
                             transition-transform
                             duration-500
                             hover:scale-[1.02]
-                            md:w-[300px]
-                          "
+                            ${isWebsite
+                                                            ? 'w-[320px] md:w-[420px]'
+                                                            : 'w-[240px] md:w-[300px]'}
+                          `}
                                                 />
                                             </div>
                                         )
